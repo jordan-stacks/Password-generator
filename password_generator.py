@@ -31,7 +31,8 @@ while True:
 if pass_type in ['complex']:
     temp = 0
     if temp < pass_len:
-        password[temp] = random.choice(string.printable)
+        #password[temp] = random.choice(string.printable)
+        password = password + random.choice(string.printable)
         temp = temp + 1
 
 else:
