@@ -1,7 +1,8 @@
 import random
 import string
 
-password = None
+password = ''
+pass_len = None
 affirmitive = ['Yes', 'yes', 'Y', 'y']
 negative = ['No', 'no', 'N', 'n']
 
@@ -17,11 +18,11 @@ while True:
             break
 
 while True:
-    pass_type = input('Would you like your password to include punctuation?\n')
-    if pass_type in [affirmitive]:
+    pass_type = input('Would you like your password to include special characters?\n')
+    if pass_type in affirmitive:
         pass_type = 'complex'
         break
-    elif pass_type in [negative]:
+    elif pass_type in negative:
         pass_type = 'simple'
         break
     else:
@@ -36,5 +37,4 @@ if pass_type in ['complex']:
 else:
     random.choice(string.ascii_leters)
 
-
-#random.choice(string.ascii_letters)
+print(password)
